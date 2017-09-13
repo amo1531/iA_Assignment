@@ -1,0 +1,45 @@
+.header{
+    height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .header_wrapper{
+        max-width: 900px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+        @include clearfix;
+    }
+    .header_logo{
+        float: left;
+        height: 50px;
+        width: 40px;
+        background-image: url("../Images/logo.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+    }
+    .header_nav{
+        display: block;
+        float: right;
+    }
+    ul{
+        line-height: 40px;
+        list-style: none;
+        li{
+            display: inline-block;
+            padding: 5px;
+        }
+    }
+    .header_menu_link{
+        display: block;
+        text-decoration: none;
+    }
+}
+
+
+// .header_logo::after{
+//     clear: both;
+//     display: table;
+//     content: "";
+// }
+
