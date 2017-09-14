@@ -1,0 +1,25 @@
+.background_wrapper,.heading_image{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    position: relative;
+    .heading_image{
+        position: relative;
+    }
+      .heading_image_content{
+            position: absolute;
+            text-align: center;
+            color: #ffffff;
+            font-family: "Nitti Grotesk",Helvetica,Arial,sans-serif;
+            padding: 40px 53px;
+            font-size: 18px;
+            top: 0px;
+            background: rgba(34, 34, 34, 0.3);
+            height: 100%;
+            box-sizing: border-box;
+            width: 100%;
+      }
+   
+}
