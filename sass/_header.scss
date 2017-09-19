@@ -1,3 +1,6 @@
+body{
+    @include fontstyle;
+}
 .header{
     height: 40px;
     padding-top: 25px;
@@ -38,7 +41,8 @@
         font-family: "Nitti Grotesk",Helvetica,Arial,sans-serif;
     }
     .header_menu_link:hover{
-        color: #b3d4fc;
+        color: #00baff;
+        cursor:pointer;
     }
 }
 

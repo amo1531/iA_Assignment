@@ -1,25 +1,115 @@
-.background_wrapper,.heading_image{
-    max-width: 100%;
+.carousel{
     height: auto;
     margin: 0 auto;
     display: block;
-    width: 100%;
+     width: 100%;
+    //max-width: 980px;
     position: relative;
-    .heading_image{
+    overflow: hidden;
+    .panes{
+        width: 300%;
+        list-style: none;
         position: relative;
-    }
-      .heading_image_content{
-            position: absolute;
-            text-align: center;
-            color: #ffffff;
-            font-family: "Nitti Grotesk",Helvetica,Arial,sans-serif;
-            padding: 40px 53px;
-            font-size: 18px;
-            top: 0px;
-            background: rgba(34, 34, 34, 0.3);
-            height: 100%;
-            box-sizing: border-box;
-            width: 100%;
+        overflow: hidden;
+        @include clearfix;
+    
+        .mySlides{
+            float: left;
+            position: relative;
+            width: 33.33%;
+            .heading_image{
+                display: block;
+                width: 100%;
+                max-width: 100%;
+            }
+      
+            .heading_image_content{
+                position: absolute;
+                text-align: center;
+                color: #ffffff;
+                padding: 40px 53px;
+                font-size: 18px;
+                top: 0px;
+                background: rgba(34, 34, 34, 0.3);
+                height: 100%;
+                box-sizing: border-box;
+                width: 100%;
+                }
+             @include media-query(ipad){
+        .heading_image_content{
+            color: #000;
+            top: 0;
+            right: 0px;
+            background: none;
+            width: 50%;
+            padding-top: 150px;
+            padding-bottom: 150px;
+       }
       }
-   
+      @include media-query(laptop){
+        .heading_image_content{
+            color: #000;
+            top: 0;
+            right: 0px;
+            background: none;
+            width: 50%;
+            padding-top: 200px;
+            padding-bottom: 200px;
+       }
+      }
+      @include media-query(widescreen){
+        .heading_image_content{
+            color: #000;
+            top: 0;
+            right: 0px;
+            background: none;
+            width: 50%;
+            padding-top: 180px;
+            padding-bottom: 180px;
+       }
+      }
+    }
+}
+         a{
+            position: absolute;           
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: block;
+            top: 50%;
+            height: 32px;
+            width: 32px;
+        }
+      .left_arrow_link{
+            background-image: url("../Images/icon-arrow-left.png");
+            left: 1%;
+      }
+      .left_arrow_link:hover{
+            background-image: url("../Images/icon-arrow-left-hover.png");
+      }
+      .right_arrow_link{
+            background-image: url("../Images/icon-arrow-right.png");
+            right: 1%;
+      }
+       .right_arrow_link:hover{
+            background-image: url("../Images/icon-arrow-right-hover.png");
+      }
+      .dots_wrapper{
+          position: absolute;
+          top: 90%;
+          right: 45%;
+          .dot {
+                    cursor:pointer;
+                    height: 13px;
+                    width: 13px;
+                    margin: 0 2px;
+                    border: 2px solid floralwhite;
+                    background-color:transparent;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: background-color 0.6s ease;
+                }
+            .active, .dot:hover {
+                    background-color: #ffffff;
+            }
+      }
 }

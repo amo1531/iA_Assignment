@@ -1,7 +1,10 @@
 .main_content_wrapper{
     max-width: 900px;
+    width: 100%;
     padding-left: 25px;
     padding-right: 25px;
+    margin-right: auto;
+    margin-left: auto;
     .top_content{
         display: block;
         margin: 50px 0;
@@ -27,16 +30,61 @@
                 width: 100%;
                 border: 1px solid #d0d0d0;
             }
+
         }
         .content_wrapper{
+            float: left;
             flex: 0 0 100%;
+            .article_heading{
+                font-size: 28px;
+            }
             .article_heading:hover{
                 color: #00baff;
+                cursor: pointer;
             }
             .article_content{
-                font-size: 17px;
-                line-height: 1.5;
+                font-size: 22px;
+                line-height: 1.6;
+            }
+        }
+        @include media-query(ipad){
+            .content_wrapper{
+                flex:1.2 1.2 0%
+            }
+             .image_container{
+                flex: 0.7 0.7 0%;
+                padding: 0 32px 0 0
+            }
+             .article_image{
+                max-width: 100%;
+            }
+        }
+         @include media-query(laptop){
+            .content_wrapper{
+                flex:1.2 1.2 0%
+            }
+             .image_container{
+                flex: 0.7 0.7 0%;
+                padding: 0 32px 0 0
+            }
+             .article_image{
+                max-width: 100%;
+            }
+        }
+         @include media-query(widescreen){
+            .content_wrapper{
+                flex:1.2 1.2 0%
+            }
+             .image_container{
+                flex: 0.7 0.7 0%;
+                padding: 0 32px 0 0
+            }
+             .article_image{
+                max-width: 100%;
             }
         }
    }
-}
+} 
+
+
+
